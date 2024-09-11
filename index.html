@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AInspire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="multimedia/logos/iconn.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="left"> </div>
+        <div class="tools">
+            <button id="pincel-btn" title="Pincel"><i class="fa-solid fa-brush "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="goma-btn" title="Borrador"><i class="fa-solid fa-eraser "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="picker-btn" title="Selector de color"><i class="fa-solid fa-eye-dropper "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="escribir-btn" title="Texto"><i class="fa-solid fa-font "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="seleccion-btn" title="Selección"><i class="fa-solid fa-vector-square "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="geometria-btn" title="Formas"><i class="fa-solid fa-shapes "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="mover-btn" title="Mover"><i class="fa-solid fa-up-down-left-right "
+                    style="color: rgb(172, 172, 172);"></i></button>
+            <button id="borrar-btn" title="Borrar todo"><i class="fa-solid fa-trash-can "
+                    style="color: rgb(172, 172, 172);"></i></button>
+        </div>
+        <div class="colors"><input type="color" id="colores" value="#ac76f3"></div>
+        <div class="marca">
+            <h4><span class="ai">AI</span><span class="nspirate">nspirate</span></h4>
+            <img src="multimedia/logos/slogo.png" alt="" id="logo">
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="seccion1">
+            <h4>Preferencias</h4>
+        </div>
+        <div class="seccion3">
+            <h4>Grosor</h4>
+        </div>
+        <div class="seccion2">
+            <h4><span class="ai">AI</span><span class="nspirate">nspirate</span></h4>
+        </div>
+    </div>
+
+    <main>
+        <canvas id="lienzo">
+
+        </canvas>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

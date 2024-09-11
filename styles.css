@@ -1,0 +1,224 @@
+/*Estilos del body*/
+main {
+    grid-area: main;
+    padding: 2vh 2vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2a2c2c;
+}
+
+/*Estilos del header*/
+header {
+    height: 15vh;
+    margin: 0;
+    padding: 0;
+    background-color: #434545;
+    border-bottom: 2px rgb(172, 172, 172) solid;
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    grid-area: header;
+    display: flex;
+}
+
+header .left {
+    width: 15vw;
+    height: 100%;
+    border-right: 2px rgb(172, 172, 172) solid;
+}
+
+header .tools {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    justify-content: space-between;
+    gap: 1vw;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0, 3vw;
+    border-right: 2px rgb(172, 172, 172) solid;
+}
+
+header .tools button {
+    margin-top: 4vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 4vh;
+    width: 2, 5vw;
+    height: 2, 5vw;
+    background-color: #616363;
+    border: 2px rgb(172, 172, 172) solid;
+}
+
+header .tools button:active i {
+    transform: scale(1.5); /* Escala el icono al 150% de su tamaño original */
+}
+
+header .colors {
+    margin: 2vh 1vw;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors input[type="color"] {
+    border: none;
+    -webkit-appearance: none;
+    width: 2vw;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.colors input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.marca {
+    padding: 1vh 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'tomorrow';
+    font-size: 3vw;
+    gap: 3vw;
+}
+
+.tools button i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tools button:hover i {
+    transform: scale(1.9);
+    color: #000;
+}
+
+.marca img {
+    filter: drop-shadow(2px 2px 5px rgb(47, 46, 48));
+}
+
+#word {
+    width: 12vw;
+    height: auto;
+    padding-left: 10vw;
+    margin-right: 2vw;
+}
+
+#logo {
+    width: 5vw;
+    height: auto;
+}
+
+/*Estilos de la barra lateral*/
+.sidebar {
+    height: 100vh;
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #434545;
+    padding-top: 2vh;
+    z-index: 5;
+    border-right: 2px rgb(172, 172, 172) solid;
+    grid-area: sidebar;
+    display: block;
+    margin-top: 13vh;
+    margin-left: 0;
+}
+
+.seccion1,
+.seccion2,
+.seccion3 {
+    border: 1px rgb(172, 172, 172) solid;
+    width: 100%;
+    height: 28vh;
+    text-align: center;
+    font-family: 'tomorrow';
+    color: rgb(255, 255, 255);
+}
+
+.seccion1 h4,
+.seccion2 h4,
+.seccion3 h4 {
+    display: block;
+    border: 1px rgb(172, 172, 172) solid;
+    margin: 0;
+}
+
+.ai {
+    color: rgb(156, 88, 219);
+}
+
+.nspirate {
+    color: rgb(255, 255, 255);
+}
+
+/*Estilos del lienzo*/
+
+#lienzo {
+    width: 100vh;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    margin-left: 17vw;
+    margin-top: 2vw;
+}
+
+/*Estilos del color picker*/
+
+#colores {
+    width: 6vw;
+    height: 6vw;
+    border: 0.2vw solid #333;
+    box-shadow: 0 0.5vw 0.7vw rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    padding: 0;
+}
+
+/*Media querist's*/
+
+@media (max-width: 800px) {
+
+    #lienzo {
+        width: 90vh;
+        height: 70vh;
+        margin-left: 22vw;
+    }
+
+    .sidebar {
+        width: 20vw;
+    }
+
+    header .tools {
+        height: 100%;
+        width: 50%;
+        display: grid;
+        justify-content: space-between;
+        gap: 0vw;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 0, 3vw;
+        border-right: 2px rgb(172, 172, 172) solid;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .tools {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 25vw;
+    }
+}
+
+@font-face {
+    font-family: 'tomorrow';
+    src: url(multimedia/fonts/Tomorrow-ExtraLight.ttf);
+    font-weight: 500;
+}
